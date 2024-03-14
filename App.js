@@ -6,7 +6,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import MovieListScreen from "./screens/MovieListScreen/MovieListScreen.main";
 import MovieDetailScreen from "./screens/MovieDetailScreen/MovieDetailScreen.main";
 import MovieFilterScreen from "./screens/MovieFilterScreen/MovieFilterScreen.main";
-
+const RootStack = createStackNavigator();
 /* TODO: 
 
   This app has three screens:
@@ -22,5 +22,15 @@ import MovieFilterScreen from "./screens/MovieFilterScreen/MovieFilterScreen.mai
 
   https://reactnavigation.org/docs/modal */
 export default function App() {
-  return <NavigationContainer>{}</NavigationContainer>;
+  return ( <NavigationContainer>
+    <RootStack.Navigator>
+    <RootStack.Group> 
+        <RootStack.Screen name = "MovieList" component={MovieListScreen} />
+        <RootStack.Screen name = "MovieDetail" component={MovieDetailScreen} />
+    </RootStack.Group>
+    <RootStack.Group screenOptions = {{presentation: 'modal' }}>
+        <RootStack.Screen name="MovieFilter" component={MovieFilterScreen} />
+    </RootStack.Group>
+    </RootStack.Navigator> 
+    </NavigationContainer> );
 }
