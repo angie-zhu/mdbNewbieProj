@@ -1,6 +1,12 @@
 import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
+  movieImageDetail: {
+    width: 108,
+    height: 160,
+    alignSelf: "center",
+  },
+  
   container: {
     flex: 1,
     padding: 16,
