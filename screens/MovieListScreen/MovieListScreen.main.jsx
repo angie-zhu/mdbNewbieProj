@@ -15,18 +15,19 @@ export default function MovieListScreen({ navigation, route }) {
 
   // TODO: Fill out the methods below.
   const selectedMovie = (movieItem) => {
-    navigation.navigate("MovieDetail", {movie: movieItem})
+    navigation.navigate("Movie Details", {movie: movieItem})
   };
 
   const selectedFilterButton = () => {
-    navigation.navigate("MovieFilter", {Actors: actors})
+    navigation.navigate("Filter", {Actors: actors})
   };
 
   useEffect(
     () => {
       navigation.setOptions({
         headerRight: () => (<Button 
-          onPress = {() => {selectedFilterButton}} title="MovieFilter" />)
+          onPress = {() => selectedFilterButton()} 
+          title="Filter" />)
       })
     },
     []
@@ -34,11 +35,11 @@ export default function MovieListScreen({ navigation, route }) {
 
   useEffect(
     () => {
-      
-      setActors(route.params.Actors)
+      if (route.params?.Actors != undefined) {
+      setActors(route.params.Actors)}
       
     },
-    [route.params?.Actors]
+    [route.params]
   );
 
   // Renders a row of the FlatList.
@@ -60,7 +61,7 @@ export default function MovieListScreen({ navigation, route }) {
     if (search) {
       const title = item.title.toLowerCase();
       const searchLower = search.toLowerCase();
-      if (!title.equals(searchLower)) {
+      if (!title.startsWith(searchLower)) {
         meetsSearchCriteria = false;
       }
     }
@@ -72,8 +73,11 @@ export default function MovieListScreen({ navigation, route }) {
     }
 
     if (meetsSearchCriteria && meetsActorsCriteria) {
-      const onPress = () => navigation.navigate("MovieDetail", {movie: item});
-      return ( <TouchableOpacity onPress = {onPress}><MovieCell movieItem = {item}/> </TouchableOpacity> );
+      const onPress = () => navigation.navigate("Movie Details", {movie: item});
+      return ( 
+      <TouchableOpacity onPress = {onPress}> 
+        <MovieCell movieItem = {item}/>
+      </TouchableOpacity> );
     } else {
       // If the item doesn't meet search/filter criteria, then we can
       // simply return null and it won't be rendered in the list!
@@ -85,14 +89,8 @@ export default function MovieListScreen({ navigation, route }) {
   // a SafeAreaView to support iOS.
   return (
     <SafeAreaView style={styles.container}>
-      <SearchBar placeholder="Type Here..."
-             onChangeText={setSearch}
-             value={search}/>
-      <FlatList
-            data = {TABLE_DATA}
-            renderItem= {renderItem}
-            keyExtractor={(item) => item.id}
-          />
+      <SearchBar placeholder="Type Here..." onChangeText={setSearch} value={search}/>
+      <FlatList data = {TABLE_DATA} renderItem= {renderItem} keyExtractor={(item) => item.id}/>
     </SafeAreaView>
   );
 }

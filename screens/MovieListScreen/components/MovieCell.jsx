@@ -12,7 +12,7 @@ export const MovieCell = ({ movieItem }) => {
       <Image style = {styles.movieCellImage}source = {{uri: movieItem.posterurl}}></Image>
     </View>
     <View style = {styles.movieCellRight}> 
-      <Text style = {styles.movieCellSubtitle}>{movieItem.actors}</Text>
+      <Text style = {styles.movieCellSubtitle}>{movieItem.actors.join(", ")}</Text>
       <Text style = {styles.movieCellTitle}>{movieItem.title}</Text>
       </View> 
     </View>

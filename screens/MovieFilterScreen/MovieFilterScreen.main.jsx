@@ -24,10 +24,10 @@ export default function MovieFilterScreen({ navigation, route }) {
     () => {
       setActors(route.params.Actors);
     },
-    
     [Actors]
   );
 
+ 
   useEffect(
     () => {
 
@@ -36,10 +36,10 @@ export default function MovieFilterScreen({ navigation, route }) {
         headerRight: () => (
           <Button
           title="Done"
-            onPress={() => {
-              navigation.navigate("MovieList", { Actors: actors });
-              merge = true
-            }}
+            onPress={() => 
+              navigation.navigate("Movie List", { Actors: actors }, merge = true)
+              
+            }
             
           />),
           });

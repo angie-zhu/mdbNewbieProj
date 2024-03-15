@@ -25,11 +25,11 @@ export default function App() {
   return ( <NavigationContainer>
     <RootStack.Navigator>
     <RootStack.Group> 
-        <RootStack.Screen name = "MovieList" component={MovieListScreen} />
-        <RootStack.Screen name = "MovieDetail" component={MovieDetailScreen} />
+        <RootStack.Screen name = "Movie List" component={MovieListScreen} />
+        <RootStack.Screen name = "Movie Details" component={MovieDetailScreen} />
     </RootStack.Group>
     <RootStack.Group screenOptions = {{presentation: 'modal' }}>
-        <RootStack.Screen name="MovieFilter" component={MovieFilterScreen} />
+        <RootStack.Screen name="Filter" component={MovieFilterScreen} />
     </RootStack.Group>
     </RootStack.Navigator> 
     </NavigationContainer> );
