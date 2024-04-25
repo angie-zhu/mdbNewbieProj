@@ -46,7 +46,8 @@
     "actors": ["Chadwick Boseman", "Michael B. Jordan", "Lupita Nyong'o"],
     "imdbRating": 7.0,
     "posterurl": "https://upload.wikimedia.org/wikipedia/en/5/5d/Dwinelle_hall_uc_berkeley.jpg", 
-    
+    "longitude": "-122.26040999999999",
+    "latitude": "37.870579999999997"
   },
   {
     "id": "2",
@@ -94,7 +95,9 @@
     "storyline": "Set at the dawn of time, when prehistoric creatures and woolly mammoths roamed the earth, Early Man tells the story of Dug, along with sidekick Hognob as they unite his tribe against a mighty enemy Lord Nooth and his Bronze Age City to save their home.",
     "actors": ["Tom Hiddleston", "Eddie Redmayne", "Maisie Williams"],
     "imdbRating": 6.3,
-    "posterurl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Wheeler_Hall--UC_Berkeley--Panoramic.jpg/500px-Wheeler_Hall--UC_Berkeley--Panoramic.jpg"
+    "posterurl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Wheeler_Hall--UC_Berkeley--Panoramic.jpg/500px-Wheeler_Hall--UC_Berkeley--Panoramic.jpg",
+    "longitude": "-122.25914",
+    "latitude": "37.871290000000002"
   },
   {
     "id": "3",
@@ -142,7 +145,7 @@
     "storyline": "Two officers with patriotic hearts suddenly have a fallout. The mentor, Colonel Abhay Singh has complete faith in the country's system while prot\u00e9g\u00e9 Major Jai Bakshi thinks differently due to a recent stint in surveillance.",
     "actors": ["Anupam Kher", "Sidharth Malhotra", "Naseeruddin Shah"],
     "imdbRating": "",
-    "posterurl": "https://s.hdnux.com/photos/01/33/54/20/24036415/3/960x0.webp"  
+    "posterurl": "https://s.hdnux.com/photos/01/33/54/20/24036415/3/960x0.webp"
   },
   {
     "id": "4",
