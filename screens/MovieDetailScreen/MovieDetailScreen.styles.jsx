@@ -11,6 +11,7 @@ export const styles = StyleSheet.create({
     flex: 1,
     padding: 16,
     backgroundColor: "#ffffff",
+    padding: 20,
   },
   h1: {
     fontFamily: "Avenir",
@@ -32,7 +33,7 @@ export const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: "300",
     color: "gray",
-    marginTop: 20,
+    marginTop: 10,
     textAlign: "center",
   },
   h4: {
@@ -46,8 +47,16 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    marginTop: 20,
+    marginTop: 1,
 
+  },
+  h5: {
+    fontFamily: "Avenir",
+    fontSize: 18,
+    fontWeight: "300",
+    color: "gray",
+    marginTop: 30,
+    textAlign: "center",
   },
   segment: {
     width: 20,
@@ -58,5 +67,13 @@ export const styles = StyleSheet.create({
   },
   filledSegment: {
     backgroundColor: 'pink', // Yellow color for filled segment
+  },
+  input: {
+    borderWidth: 1,
+    borderColor: '#ccc',
+    borderRadius: 5,
+    padding: 10,
+    marginTop: 1, // Adjust this value to control the space between ratingContainer and input
+    minHeight: 100, // Set minimum height to make it more visible
   },
 });
