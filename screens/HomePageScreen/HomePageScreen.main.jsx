@@ -1,20 +1,30 @@
-import React from "react";
-import { SafeAreaView, Text, Image, ScrollView} from "react-native";
-import { View, Button, StyleSheet } from 'react-native';
-import { styles } from "./HomePageScreen.styles";
+import React from 'react';
+import { SafeAreaView, View, Text, Image, TouchableOpacity } from 'react-native';
+import { styles } from './HomePageScreen.styles'; // Importing styles from the .styles.js file
 
-
-export default function HomePageScreen({navigation, route}) {
+export default function HomePageScreen({ navigation }) {
   return (
     <SafeAreaView style={styles.container}>
-        <Button
-            title="Go to Map"
-            onPress={() => navigation.navigate('Map')}
+      <View style={styles.mapContainer}>
+        <Image
+          source={require('../../assets/FLOMAPICON2.png')}
+          style={styles.mapImage}
         />
-        {/* <Button
-            title="Go to Info"
-            onPress={() => navigation.navigate('InfoScreen')}
-        /> */}
+      </View>
+      
+      <Text style={styles.title}>FloMap</Text>
+
+      <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Map')}>
+        <Text style={styles.buttonText}>Map</Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('FAQs')}>
+        <Text style={styles.buttonText}>FAQs</Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Resources')}>
+        <Text style={styles.buttonText}>Resources</Text>
+      </TouchableOpacity>
     </SafeAreaView>
   );
 }
