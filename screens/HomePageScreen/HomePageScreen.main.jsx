@@ -18,7 +18,7 @@ export default function HomePageScreen({ navigation }) {
         <Text style={styles.buttonText}>Map</Text>
       </TouchableOpacity>
 
-      <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('FAQs')}>
+      <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('ModalLocations')}>
         <Text style={styles.buttonText}>FAQs</Text>
       </TouchableOpacity>
 

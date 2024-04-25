@@ -56,10 +56,10 @@ export default function Map({navigation, route}) {
             <MapView
                 style={styles.map}
                 initialRegion={{
-                latitude: 37.8715,
-                longitude: -122.2730,
-                latitudeDelta: 0.1,
-                longitudeDelta: 0.1,
+                latitude: 37.870934,
+                longitude: -122.259392,
+                latitudeDelta: 0.01,
+                longitudeDelta: 0.001,
                 }}
                 >
             {renderMarkers()}   

@@ -33,9 +33,9 @@ export default function App() {
         <RootStack.Screen name = "Locations" component={MovieListScreen} />
         <RootStack.Screen name = "Details" component={MovieDetailScreen} />
     </RootStack.Group>
-    <RootStack.Group screenOptions = {{presentation: 'modal' }}>
+    {/* <RootStack.Group screenOptions = {{presentation: 'modal' }}>
         <RootStack.Screen name="Filter" component={MovieFilterScreen} />
-    </RootStack.Group>
+    </RootStack.Group> */}
     </RootStack.Navigator> 
     </NavigationContainer> );
 }
