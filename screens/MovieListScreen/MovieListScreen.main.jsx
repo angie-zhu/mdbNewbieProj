@@ -15,7 +15,7 @@ export default function MovieListScreen({ navigation, route }) {
 
   // TODO: Fill out the methods below.
   const selectedMovie = (movieItem) => {
-    navigation.navigate("Movie Details", {movie: movieItem})
+    navigation.navigate("Details", {movie: movieItem})
   };
 
   const selectedFilterButton = () => {
@@ -73,7 +73,7 @@ export default function MovieListScreen({ navigation, route }) {
     }
 
     if (meetsSearchCriteria && meetsActorsCriteria) {
-      const onPress = () => navigation.navigate("Movie Details", {movie: item});
+      const onPress = () => navigation.navigate("Details", {movie: item});
       return ( 
       <TouchableOpacity onPress = {onPress}> 
         <MovieCell movieItem = {item}/>

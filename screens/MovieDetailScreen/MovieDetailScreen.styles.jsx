@@ -42,4 +42,21 @@ export const styles = StyleSheet.create({
     marginTop: 20,
     textAlign: "center",
   },
+  ratingContainer: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: 20,
+
+  },
+  segment: {
+    width: 20,
+    height: 20,
+    alignSelf: 'center',
+    margin: 1,
+    backgroundColor: '#CCCCCC',
+  },
+  filledSegment: {
+    backgroundColor: 'pink', // Yellow color for filled segment
+  },
 });

@@ -25,8 +25,8 @@ export default function App() {
   return ( <NavigationContainer>
     <RootStack.Navigator>
     <RootStack.Group> 
-        <RootStack.Screen name = "Movie List" component={MovieListScreen} />
-        <RootStack.Screen name = "Movie Details" component={MovieDetailScreen} />
+        <RootStack.Screen name = "Locations" component={MovieListScreen} />
+        <RootStack.Screen name = "Details" component={MovieDetailScreen} />
     </RootStack.Group>
     <RootStack.Group screenOptions = {{presentation: 'modal' }}>
         <RootStack.Screen name="Filter" component={MovieFilterScreen} />
