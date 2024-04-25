@@ -2,8 +2,8 @@ import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
   movieImageDetail: {
-    width: 108,
-    height: 160,
+    width: 300,
+    height: 200,
     alignSelf: "center",
   },
   
@@ -41,5 +41,22 @@ export const styles = StyleSheet.create({
     fontWeight: "300",
     marginTop: 20,
     textAlign: "center",
+  },
+  ratingContainer: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: 20,
+
+  },
+  segment: {
+    width: 20,
+    height: 20,
+    alignSelf: 'center',
+    margin: 1,
+    backgroundColor: '#CCCCCC',
+  },
+  filledSegment: {
+    backgroundColor: 'pink', // Yellow color for filled segment
   },
 });

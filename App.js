@@ -7,6 +7,7 @@ import MovieListScreen from "./screens/MovieListScreen/MovieListScreen.main";
 import MovieDetailScreen from "./screens/MovieDetailScreen/MovieDetailScreen.main";
 import MovieFilterScreen from "./screens/MovieFilterScreen/MovieFilterScreen.main";
 import HomePageScreen from "./screens/HomePageScreen/HomePageScreen.main";
+import Map from "./screens/MainMapScreen/MainMapScreen.main";
 
 const RootStack = createStackNavigator();
 /* TODO: 
@@ -24,17 +25,17 @@ const RootStack = createStackNavigator();
 
   https://reactnavigation.org/docs/modal */
 export default function App() {
-  return ( 
-  <NavigationContainer>
-        <RootStack.Navigator>
-          <RootStack.Group> 
-              <RootStack.Screen name = "Home Page" component={HomePageScreen} />
-              <RootStack.Screen name = "Movie List" component={MovieListScreen} />
-              <RootStack.Screen name = "Movie Details" component={MovieDetailScreen} />
-          </RootStack.Group>
-          <RootStack.Group screenOptions = {{presentation: 'modal' }}>
-              <RootStack.Screen name="Filter" component={MovieFilterScreen} />
-          </RootStack.Group>
-        </RootStack.Navigator> 
+  return ( <NavigationContainer>
+    <RootStack.Navigator>
+    <RootStack.Group> 
+        <RootStack.Screen name = "Home Page" component={HomePageScreen} />
+        <RootStack.Screen name = "Map" component={Map} />
+        <RootStack.Screen name = "Locations" component={MovieListScreen} />
+        <RootStack.Screen name = "Details" component={MovieDetailScreen} />
+    </RootStack.Group>
+    <RootStack.Group screenOptions = {{presentation: 'modal' }}>
+        <RootStack.Screen name="Filter" component={MovieFilterScreen} />
+    </RootStack.Group>
+    </RootStack.Navigator> 
     </NavigationContainer> );
 }
