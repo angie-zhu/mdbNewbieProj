@@ -12,7 +12,7 @@ export default function HomePageScreen({ navigation }) {
         />
       </View>
       
-      <Text style={styles.title}>FloMap</Text>
+      <Text style={styles.title}>FlowMap</Text>
 
       <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Map')}>
         <Text style={styles.buttonText}>Map</Text>
