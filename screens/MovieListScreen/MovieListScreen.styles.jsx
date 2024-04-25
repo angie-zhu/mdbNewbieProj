@@ -32,4 +32,16 @@ export const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "baseline",
   },
+  searchContainer: {
+    backgroundColor: 'lightgray',  // Set the background of the outer container
+    borderBottomColor: 'transparent',  // Remove any bottom border if present
+    borderTopColor: 'transparent',  // Remove any top border if present
+  },
+  inputContainer: {
+    backgroundColor: 'lightgray',  // Set the background of the input field container
+  },
+  input: {
+    backgroundColor: 'lightgray',  // Ensure the input field itself also has the light gray background
+    color: 'black'  // Set text color
+  }
 });

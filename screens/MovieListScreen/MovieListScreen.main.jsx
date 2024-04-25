@@ -89,7 +89,14 @@ export default function MovieListScreen({ navigation, route }) {
   // a SafeAreaView to support iOS.
   return (
     <SafeAreaView style={styles.container}>
-      <SearchBar placeholder="Type Here..." onChangeText={setSearch} value={search}/>
+      <SearchBar 
+          placeholder="Type Here..." 
+          onChangeText={setSearch} 
+          value={search}
+          containerStyle={styles.searchContainer}       // Styles the outer container
+          inputContainerStyle={styles.inputContainer}   // Styles the container of the input field
+          inputStyle={styles.input}                     // Styles the input field itself
+      />
       <FlatList data = {TABLE_DATA} renderItem= {renderItem} keyExtractor={(item) => item.id}/>
     </SafeAreaView>
   );

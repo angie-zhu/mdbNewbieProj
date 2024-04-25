@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { SafeAreaView, Text, Image, ScrollView} from "react-native";
+import { SafeAreaView, Text, Image, ScrollView, TouchableOpacity,} from "react-native";
 import { View, Button, StyleSheet } from 'react-native';
 import { styles } from "./MainMapScreen.styles";
 import MapView from 'react-native-maps';
@@ -10,7 +10,16 @@ import MarkerIcon from "../../assets/DROPLET2.png";
 const TABLE_DATA = require("../../assets/movies.json");
 
 export default function Map({navigation, route}) {
-    
+
+  const LocationButton = ({ onPress }) => (
+    <TouchableOpacity onPress={onPress} style={styles.button}>
+      <Image
+        source={require('../../assets/PIN.png')}  // Replace with your actual image path
+        style={styles.image}
+      />
+    </TouchableOpacity>
+  );
+  
 
     const berkCoordinates = [
         { latitude: 37.9005, longitude: -122.3096 }, // Northwest corner
@@ -44,9 +53,7 @@ export default function Map({navigation, route}) {
     useEffect(
        () => {
          navigation.setOptions({
-           headerRight: () => (<Button 
-             onPress = {() => selectedLocationButton()} 
-             title="Locations" />)
+          headerRight: () => <LocationButton onPress={selectedLocationButton} />
          })
        },
        []
