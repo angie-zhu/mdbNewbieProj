@@ -73,7 +73,19 @@ export const styles = StyleSheet.create({
     borderColor: '#ccc',
     borderRadius: 5,
     padding: 10,
-    marginTop: 1, // Adjust this value to control the space between ratingContainer and input
-    minHeight: 100, // Set minimum height to make it more visible
+    marginTop: 0, // Adjust this value to control the space between ratingContainer and input
+    minHeight: 50, // Set minimum height to make it more visible
+    fontSize: 16, 
+    textAlingVertical: 'top'
+  },
+  commentContainer: {
+    backgroundColor: '#f0f0f0',
+    padding: 10,
+    marginTop: 10,
+    borderRadius: 5,
+  },
+  commentText: {
+    fontFamily: "Avenir",
+    fontSize: 16,
   },
 });
