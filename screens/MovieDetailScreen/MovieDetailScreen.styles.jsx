@@ -6,10 +6,16 @@ export const styles = StyleSheet.create({
     height: 250,
     alignSelf: "center",
   },
+  keyboardAvoidingContainer: {
+    flex: 1,
+    padding: 16,
+    paddingTop: 20, // Adjust the top padding as needed
+    backgroundColor: "#ffffff",
+  },
   
   container: {
     flex: 1,
-    padding: 16,
+    padding: 20,
     backgroundColor: "#ffffff",
     padding: 20,
   },
