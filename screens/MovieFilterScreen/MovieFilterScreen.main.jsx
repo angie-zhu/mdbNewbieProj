@@ -37,7 +37,7 @@ export default function MovieFilterScreen({ navigation, route }) {
           <Button
           title="Done"
             onPress={() => 
-              navigation.navigate("Movie List", { Actors: actors }, merge = true)
+              navigation.navigate("Locations", { Actors: actors }, merge = true)
               
             }
             
@@ -83,7 +83,7 @@ export default function MovieFilterScreen({ navigation, route }) {
     <SafeAreaView style={styles.container}>
       <View>
         <Text style={{ fontFamily: "Avenir", fontSize: 22, margin: 20 }}>
-          {"Filter by Actor"}
+          {"Filter by Stock"}
         </Text>
         <FlatList
           data={ALL_ACTORS}
