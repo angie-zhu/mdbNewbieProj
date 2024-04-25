@@ -3,7 +3,7 @@ import { StyleSheet } from "react-native";
 export const styles = StyleSheet.create({
   movieImageDetail: {
     width: 300,
-    height: 200,
+    height: 250,
     alignSelf: "center",
   },
   
@@ -12,6 +12,14 @@ export const styles = StyleSheet.create({
     padding: 16,
     backgroundColor: "#ffffff",
     padding: 20,
+  },
+  button: {
+    backgroundColor: '#FAD2D2',
+    padding: 15,
+    borderRadius: 25,
+    width: '80%',
+    marginBottom: 10,
+    alignItems: 'center',
   },
   h1: {
     fontFamily: "Avenir",
@@ -86,7 +94,7 @@ export const styles = StyleSheet.create({
     borderRadius: 5,
     padding: 10,
     marginTop: 0, // Adjust this value to control the space between ratingContainer and input
-    minHeight: 100, // Set minimum height to make it more visible
+    minHeight: 50, // Set minimum height to make it more visible
     fontSize: 16,
     textAlignVertical: 'top', // Align text to the top
   },

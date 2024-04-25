@@ -75,7 +75,7 @@ export default function MovieDetailScreen({ route }) {
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView style={styles.container}>
-        <KeyboardAvoidingView style={styles.container} behavior="padding" keyboardVerticalOffset={400}>
+        <KeyboardAvoidingView style={styles.container} behavior={Platform.OS === "ios" ? "padding" : null} keyboardVerticalOffset={Platform.OS === "ios" ? 64 : 0} >
           <Image style={styles.movieImageDetail} source={{ uri: route.params.movie.posterurl }}/>
           <Text style={styles.h1}>{route.params.movie.title}</Text>
           <Text style={styles.h3}> Current Stock: </Text>
@@ -90,6 +90,7 @@ export default function MovieDetailScreen({ route }) {
             value={comment}
             onChangeText={handleCommentChange}
           />  
+  
           <Button title="Submit Comment" onPress={handleSubmitComment} />
           {/* Render comments */}
           <Text style = {styles.h6}> Comments: </Text>

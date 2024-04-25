@@ -11,48 +11,48 @@ const TABLE_DATA = require("../../assets/movies.json");
 // Output: a screen containing the list of movies
 export default function MovieListScreen({ navigation, route }) {
   const [search, setSearch] = useState("");
-  const [actors, setActors] = useState([]);
+  //const [actors, setActors] = useState([]);
 
   // TODO: Fill out the methods below.
   const selectedMovie = (movieItem) => {
     navigation.navigate("Details", {movie: movieItem})
   };
 
-  const selectedFilterButton = () => {
-    navigation.navigate("Filter", {Actors: actors})
-  };
+  // const selectedFilterButton = () => {
+  //   navigation.navigate("Filter", {Actors: actors})
+  // };
 
-  useEffect(
-    () => {
-      navigation.setOptions({
-        headerRight: () => (<Button 
-          onPress = {() => selectedFilterButton()} 
-          title="Filter" />)
-      })
-    },
-    []
-  );
+  // useEffect(
+  //   () => {
+  //     navigation.setOptions({
+  //       headerRight: () => (<Button 
+  //         onPress = {() => selectedFilterButton()} 
+  //         title="Filter" />)
+  //     })
+  //   },
+  //   []
+  // );
 
-  useEffect(
-    () => {
-      if (route.params?.Actors != undefined) {
-      setActors(route.params.Actors)}
+  // useEffect(
+  //   () => {
+  //     if (route.params?.Actors != undefined) {
+  //     setActors(route.params.Actors)}
       
-    },
-    [route.params]
-  );
+  //   },
+  //   [route.params]
+  // );
 
   // Renders a row of the FlatList.
   const renderItem = ({ item }) => {
-    const overlapFound = (listA, listB) => {
-      let foundActor = false;
-      listA.forEach((x) => {
-        if (listB.includes(x)) {
-          foundActor = true;
-        }
-      });
-      return foundActor;
-    };
+    // const overlapFound = (listA, listB) => {
+    //   let foundActor = false;
+    //   listA.forEach((x) => {
+    //     if (listB.includes(x)) {
+    //       foundActor = true;
+    //     }
+    //   });
+    //   return foundActor;
+    // };
 
     // TODO: Set up search & filter criteria.
     let meetsSearchCriteria = true;
@@ -66,13 +66,13 @@ export default function MovieListScreen({ navigation, route }) {
       }
     }
 
-    if (actors.length > 0) {
-      if (!overlapFound(item.actors, actors)) {
-        meetsActorsCriteria = false;
-      }
-    }
-
-    if (meetsSearchCriteria && meetsActorsCriteria) {
+    // if (actors.length > 0) {
+    //   if (!overlapFound(item.actors, actors)) {
+    //     meetsActorsCriteria = false;
+    //   }
+    // }
+// && meetsActorsCriteria add this line back in to search criteria for implementing filter, for now we dont was it
+    if (meetsSearchCriteria ) {
       const onPress = () => navigation.navigate("Details", {movie: item});
       return ( 
       <TouchableOpacity onPress = {onPress}> 

@@ -28,23 +28,23 @@ export default function MovieFilterScreen({ navigation, route }) {
   );
 
  
-  useEffect(
-    () => {
+  // useEffect(
+  //   () => {
 
-      navigation.setOptions({
-        headerLeft: () => null,
-        headerRight: () => (
-          <Button
-          title="Done"
-            onPress={() => 
-              navigation.navigate("Locations", { Actors: actors }, merge = true)
+  //     navigation.setOptions({
+  //       headerLeft: () => null,
+  //       headerRight: () => (
+  //         <Button
+  //         title="Done"
+  //           onPress={() => 
+  //             navigation.navigate("Locations", { Actors: actors }, merge = true)
               
-            }
+  //           }
             
-          />),
-          });
-      }, [actors]
-      );
+  //         />),
+  //         });
+  //     }, [actors]
+  //     );
   
 
   // When we tap an actor cell, flip the boolean!
