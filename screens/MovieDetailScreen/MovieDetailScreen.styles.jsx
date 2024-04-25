@@ -2,8 +2,8 @@ import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
   movieImageDetail: {
-    width: 108,
-    height: 160,
+    width: 300,
+    height: 200,
     alignSelf: "center",
   },
   
