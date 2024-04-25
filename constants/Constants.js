@@ -10,3 +10,14 @@ export function getAllActors() {
   });
   return Array.from(actors).sort();
 }
+
+
+export function getAllLocations() {
+  let locations = new Set();
+  movies.forEach((movie) => {
+    movie.title.forEach((actor) => {
+      locations.add(title);
+    });
+  });
+  return Array.from(locations).sort();
+}
