@@ -5,6 +5,7 @@ import { styles } from "./MainMapScreen.styles";
 import MapView from 'react-native-maps';
 import { Marker } from "react-native-maps";
 import { render } from "react-dom";
+import MarkerIcon from "../../assets/DROPLET2.png";
 
 const TABLE_DATA = require("../../assets/movies.json");
 
@@ -32,10 +33,12 @@ export default function Map({navigation, route}) {
             <Marker
               key={index}
               coordinate={marker.coordinates}
-              title={marker.title}
               onPress={() => handleMarkerPress(marker)}
-            />
-          ));
+            >
+            <Image source={MarkerIcon} style={styles.marker}></Image>
+            </Marker>
+          )
+          );
         };
 
     useEffect(
