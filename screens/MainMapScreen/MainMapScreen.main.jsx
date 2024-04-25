@@ -22,10 +22,10 @@ export default function Map({navigation, route}) {
         navigation.navigate("Locations")
       };
 
-    // const handleMarkerPress = (item) => {
-    //     // Navigate to MovieDetailScreen with the movie item as a parameter
-    //     navigation.navigate('Details', { movie: item });
-    //     };    
+    const handleMarkerPress = (movie) => {
+        // Navigate to MovieDetailScreen with the movie item as a parameter
+        navigation.navigate('Details', { movie: movie });
+        };    
       
     const renderMarkers = () => {
           return TABLE_DATA.map((marker, index) => (
@@ -33,7 +33,7 @@ export default function Map({navigation, route}) {
               key={index}
               coordinate={marker.coordinates}
               title={marker.title}
-            //   onPress={handleMarkerPress(marker)}
+              onPress={() => handleMarkerPress(marker)}
             />
           ));
         };
